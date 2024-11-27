@@ -1,0 +1,146 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+:root {
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+
+    --accent-blue: hsl(248, 32%, 49%);
+
+    --neutral-dark-blue: hsl(249, 10%, 26%);
+    --neutral-grayish-blue: hsl(246, 25%, 77%);
+
+    --fs-body: 16px;
+
+    --ff-family: "Poppins", sans-serif;
+    --fs-main: normal;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    padding: 150px;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--primary-red);
+    background-image: url(images/bg-intro-desktop.png);
+    color: #ffffff;
+
+    font-family: var(--ff-family);
+    font-size: var(--fs-main);
+}
+
+/* left side of the web page */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 100px;
+}
+
+.left-column h1 {
+    font-size: 48px;
+    line-height: 1.25;
+}
+
+/* right side of the web page */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    width: 600px;
+}
+
+.form-heading {
+    border-radius: 10px;
+    padding: 15px 30px;
+    background-color: var(--accent-blue);
+    box-shadow: 0px 7.5px 0px 0px rgba(66, 68, 90, 0.15);
+}
+
+.form {
+    background-color: #ffffff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0px 7.5px 0px 0px rgba(66, 68, 90, 0.15);
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid var(--neutral-grayish-blue);
+    padding: 15px 30px;
+    margin-bottom: 10px;
+}
+
+.submit {
+    color: #ffffff;
+    background-color: var(--primary-green);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+
+    font-size: var(--fs-main);
+    text-transform: uppercase;
+}
+
+.undertext {
+    color: var(--neutral-grayish-blue);
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.terms {
+    color: var(--primary-red);
+}
